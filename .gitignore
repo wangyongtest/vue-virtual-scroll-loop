@@ -1,0 +1,12 @@
+node_modules
+dist
+types
+.obsolete
+*.log
+_diag.txt
+test-full.log
+install-bg.log
+install-log.txt
+npm-verbose.log
+.idea
+.vscode

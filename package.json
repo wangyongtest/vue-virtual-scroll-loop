@@ -1,0 +1,57 @@
+{
+  "name": "vue-virtual-scroll-loop",
+  "version": "1.0.0",
+  "description": "高性能无限循环滚动列表（虚拟 DOM），支持 Vue2/Vue3，横向/纵向四向滚动、调速、悬停暂停、海量数据。TypeScript 类型齐全，含单元测试。",
+  "author": "zjg",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "docs"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc -p tsconfig.json",
+    "build:types": "vue-tsc -p tsconfig.json",
+    "typecheck": "vue-tsc -p tsconfig.check.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "keywords": [
+    "vue",
+    "vue2",
+    "vue3",
+    "virtual-scroll",
+    "infinite-scroll",
+    "marquee",
+    "scroll-list",
+    "typescript"
+  ],
+  "peerDependencies": {
+    "vue": "^2.7.0 || >=3.0.0"
+  },
+  "dependencies": {
+    "vue-demi": "^0.14.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^24.1.0",
+    "typescript": "^5.5.0",
+    "vite": "^5.4.0",
+    "vitest": "^2.0.0",
+    "vue": "^3.4.0",
+    "vue-tsc": "^2.0.0"
+  }
+}
